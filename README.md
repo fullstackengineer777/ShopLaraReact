@@ -105,6 +105,17 @@ Route::resource('products',ProductController::class);
 ## Before starting the application you need to run this command to access all uploaded images ignore this command if you don't upload in a public disk.
 
 php artisan storage:link
+    
+## run Laravel sever
+    php artisan serve or php artisan serv --host 0.0.0.0
+    
+## create react app
+    
+npm install -g create-react-app 
+create-react-app crud-react 
+cd crud-react 
+npm install axios react-bootstrap bootstrap 
+npm install react-router-dom sweetalert2 --save
 
 
 
