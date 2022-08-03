@@ -96,8 +96,15 @@ public function up()
  ## Next, Open ProductController.php and add code in index, store, show, update, and delete functions:
     
     
-    
+ ## Now define routes in the api.php routes file. Go to the routes folder and open the api.php file and update the following routes:
+ 
+use App\Http\Controllers\ProductController;
 
+Route::resource('products',ProductController::class);
+
+## Before starting the application you need to run this command to access all uploaded images ignore this command if you don't upload in a public disk.
+
+php artisan storage:link
 
 
 
