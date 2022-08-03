@@ -49,9 +49,54 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## create project
 php artisan create-project laravel/laravel ShopLaraReact
+or laravel new crud-react-laravel
 
+## Configure Database Details:  .env file
+DB_CONNECTION=mysql 
+DB_HOST=127.0.0.1 
+DB_PORT=3306 
+DB_DATABASE=<DATABASE NAME>
+DB_USERNAME=<DATABASE USERNAME>
+DB_PASSWORD=<DATABASE PASSWORD>
+    
 ## create model
 php artisan make:model Category -crm
+   
+## Now Open migration file of product from database/migration and replace code in up () function:
+public function up()
+{
+    Schema::create('products', function (Blueprint $table) {
+        $table->bigIncrements('id');
+        $table->string('title');
+        $table->text('description');
+        $table->text('image');
+        $table->timestamps();
+    });
+}
+  
+## Migrate the database using the following command:
+    php artisan migrate
+
+## Now, Open Category.php model from app / Models  and update code into Product.php Model:
+    <?php
+
+        namespace App\Models;
+
+        use Illuminate\Database\Eloquent\Factories\HasFactory;
+        use Illuminate\Database\Eloquent\Model;
+
+        class Product extends Model {
+
+           use HasFactory;
+
+           protected $fillable = ['title', 'description', 'image'];
+        }
+
+    ?>
+ ## Next, Open ProductController.php and add code in index, store, show, update, and delete functions:
+    
+    
+    
 
 
 
