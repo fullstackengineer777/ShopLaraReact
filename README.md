@@ -111,11 +111,11 @@ php artisan storage:link
     
 ## create react app
     
-npm install -g create-react-app 
-create-react-app crud-react 
-cd crud-react 
-npm install axios react-bootstrap bootstrap 
-npm install react-router-dom sweetalert2 --save
+npm install -g create-react-app  <br>
+create-react-app crud-react      <br>
+cd crud-react         <br>
+npm install axios react-bootstrap bootstrap    <br>
+npm install react-router-dom sweetalert2 --save    <br>
 
 
 
